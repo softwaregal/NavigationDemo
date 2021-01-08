@@ -11,7 +11,7 @@ const Tab4Stack : FunctionComponent = (props) => {
             <Stack.Navigator>
                 <Stack.Screen
                     name="Home"
-                    component={Tab4MainScreen}
+                    component={Tab4HomeScreen}
                     options={{ title: 'Welcome' }}
                 />
             <Stack.Screen name="Profile" component={ProfileScreen} />
@@ -27,7 +27,7 @@ const ProfileScreen = ({ navigation, route }) => {
 };
 
 //child Stack of tab4
-const Tab4MainScreen: FunctionComponent = (props:any) =>{
+const Tab4HomeScreen: FunctionComponent = (props:any) =>{
     const [modalVisibility, setModalVisibility] = useState<boolean>(false)
     const onNavigate = ()=>{
         setModalVisibility(false);
@@ -48,7 +48,7 @@ const Tab4MainScreen: FunctionComponent = (props:any) =>{
                 <Text style={styles.font}>This is a modal!</Text>
                 <Button title="Navigate to Tab1"
                 onPress={onNavigate} />
-                <Button title="Navigate inside tab4 stack"
+                <Button title="Navigate to Profile"
                     onPress={()=>{
                         setModalVisibility(false);
                         setTimeout(() => {
