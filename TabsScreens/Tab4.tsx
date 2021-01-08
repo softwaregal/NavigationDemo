@@ -7,7 +7,6 @@ import { Button, Modal, Text, View, TouchableOpacity, StyleSheet} from "react-na
 //Defining the nested stack
 const Stack = createStackNavigator();
 const Tab4Stack : FunctionComponent = (props) => {
-    console.log()
     return (
             <Stack.Navigator>
                 <Stack.Screen
